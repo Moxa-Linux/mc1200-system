@@ -1,0 +1,2 @@
+SUBSYSTEM=="tty", KERNEL=="ttyS[0-9]*", KERNELS=="00:07", ACTION=="add", SYMLINK+="ttyM0"
+SUBSYSTEM=="tty", KERNEL=="ttyS[0-9]*", KERNELS=="00:08", ACTION=="add", SYMLINK+="ttyM1"
