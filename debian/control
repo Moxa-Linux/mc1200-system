@@ -1,0 +1,43 @@
+Source: mc1220-system
+Section: admin
+Priority: required
+Maintainer: Remus Wu <remusty.wu@moxa.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.3
+Homepage: https://www.moxa.com
+
+Package: mc1220-base-system
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ mc1220-moxa-configs(= ${binary:Version}),
+ moxa-it87-gpio-driver-amd64 (>= 5.2+1.0.0),
+ libmoxa-gpio-control1:amd64 (>= 1.0.2+deb9),
+ moxa-it87-serial-driver-amd64 (>= 1.0.0),
+ moxa-it87-wdt-driver-amd64 (>= 5.2+1.0.0),
+ moxa-atheros-ath10k-driver-amd64 (>= 4.9.198+1.0.0),
+ moxa-uart-control (>= 1.1.6+deb9),
+ moxa-module-control (>= 1.3.1+deb9),
+ moxa-version (>= 1.1.0+deb9),
+ modemmanager (>= 1.10.0-moxa1),
+ dbus,
+ policykit-1,
+ crda,
+ iw,
+ wireless-regdb,
+ wpasupplicant,
+ firmware-atheros (= 20161130-5),
+ alsa-utils,
+ firmware-misc-nonfree,
+ tpm2-tools (>= 3.1.3-2)
+Description: Base system for MC-1220
+ It contains the necessary tools for setting up MC-1220
+
+Package: mc1220-moxa-configs
+Architecture: all
+Depends:
+ ${misc:Depends}
+Description: MC-1220 platform configuration file
+ The platform-related configuration items are recorded in this file,
+ these items will be referred to other platform packages
