@@ -1,0 +1,9 @@
+ACTION!="add|change|move", GOTO="mm_naming_rules_end"
+
+# ModemManager naming rules:
+# 'MODEM-1' correspond to USB2.0_4
+# 'MODEM-2' correspond to USB2.0_5
+SUBSYSTEMS=="usb", DEVPATH=="/devices/pci0000:00/0000:00:14.0/usb1/1-4/*", ENV{ID_MM_PHYSDEV_UID}="MODEM-1"
+SUBSYSTEMS=="usb", DEVPATH=="/devices/pci0000:00/0000:00:14.0/usb1/1-5/*", ENV{ID_MM_PHYSDEV_UID}="MODEM-2"
+
+LABEL="mm_naming_rules_end"
