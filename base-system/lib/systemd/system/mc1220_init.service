@@ -1,0 +1,12 @@
+[Unit]
+Description=Moxa MC1220 series initial setting
+Before=rc-local.service
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/mc1220_platform_init start
+ExecStop=/sbin/mc1220_platform_init stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target poweroff.target
