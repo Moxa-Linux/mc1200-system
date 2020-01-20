@@ -1,3 +1,9 @@
+mc1220-system (1.1.0) stable; urgency=medium
+
+  * debian: add dependence
+
+ -- Remus Wu <remusty.wu@moxa.com>  Thu, 16 Jan 2020 19:54:16 +0800
+
 mc1220-system (1.0.0) stable; urgency=medium
 
   * Initial Release.
