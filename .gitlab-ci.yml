@@ -24,10 +24,14 @@ develop_build:
         - echo "The package firmware version=${PKG_FW_VERSION}"
         - echo "The package build date=${PKG_BUILDDATE}"
         - mv ../*.deb .
+        - mv ../*.buildinfo .
+        - mv ../*.changes .
     artifacts:
         name: "${CI_PROJECT_NAME}"
         paths:
         - ./*.deb
+        - ./*.buildinfo
+        - ./*.changes
 
 prepare_develop_debs:
     tags:
