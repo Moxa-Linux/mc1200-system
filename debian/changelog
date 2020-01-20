@@ -1,3 +1,9 @@
+mc1220-system (1.1.1) stable; urgency=medium
+
+  * feat: initial gpio with udev instead of shell
+
+ -- Remus Wu <remusty.wu@moxa.com>  Mon, 20 Jan 2020 17:40:15 +0800
+
 mc1220-system (1.1.0) stable; urgency=medium
 
   * debian: add dependence
