@@ -58,7 +58,7 @@ platform_initial() {
 }
 
 platform_stop() {
-	sync
+	:
 }
 
 case "$1" in
