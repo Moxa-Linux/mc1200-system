@@ -6,8 +6,55 @@
 #       2019    Remus TY Wu <remusty.wu@moxa.com>
 #
 
+#
+# Common functions
+#
+gpio_request() {
+	local gpio=${1}
+
+	if [ ! -e "/sys/class/gpio/gpio${gpio}" ]; then
+		echo "${gpio}" > /sys/class/gpio/export
+	fi
+}
+
+gpio_set_value() {
+	local gpio=${1}
+	local value=${2}
+
+	gpio_request "${gpio}"
+	echo "out" > "/sys/class/gpio/gpio${gpio}/direction"
+	echo "${value}" > "/sys/class/gpio/gpio${gpio}/value"
+}
+
+gpio_get_value() {
+	local gpio=${1}
+
+	gpio_request "${gpio}"
+	echo "in" > "/sys/class/gpio/gpio${gpio}/direction"
+	cat "/sys/class/gpio/gpio${gpio}/value"
+}
+
+initial_uart() {
+	# UR1_485		449
+	# UR1_422		450
+	# UR1_232EN		451
+	# UR2_485		452
+	# UR2_422		453
+	# UR2_232EN		454
+
+	# UART 1 RS-232
+	gpio_set_value 449 0
+	gpio_set_value 450 0
+	gpio_set_value 451 1
+
+	# UART 2 RS-232
+	gpio_set_value 452 0
+	gpio_set_value 453 0
+	gpio_set_value 454 1
+}
+
 platform_initial() {
-	:
+	initial_uart
 }
 
 platform_stop() {
