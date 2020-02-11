@@ -1,3 +1,13 @@
+mc1220-system (1.1.2) stable; urgency=medium
+
+  * feat: add dip switch status detect for module control
+  * feat: ModemManager naming rules enhancement
+  * fix: delay GPIO configuration to fit super I/O timing
+  * fix: select sim before power on
+  * debian: update dependence
+
+ -- Remus Wu <remusty.wu@moxa.com>  Tue, 11 Feb 2020 19:03:23 +0800
+
 mc1220-system (1.1.1) stable; urgency=medium
 
   * feat: initial gpio with udev instead of shell
