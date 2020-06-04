@@ -9,4 +9,4 @@ ExecStop=/sbin/mc1220_platform_init stop
 RemainAfterExit=yes
 
 [Install]
-WantedBy=multi-user.target poweroff.target
+WantedBy=multi-user.target
