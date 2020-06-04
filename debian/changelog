@@ -1,3 +1,13 @@
+mc1220-system (1.2.0) stable; urgency=medium
+
+  * chore: move moxa-config to base-system
+  * feat: add power status for module-ctl
+  * debian: remove moxa-config
+  * debian: remove dependence 'poweroff.target'
+  * debian: update dependence
+
+ -- Remus Wu <remusty.wu@moxa.com>  Thu, 04 Jun 2020 11:21:21 +0800
+
 mc1220-system (1.1.2) stable; urgency=medium
 
   * feat: add dip switch status detect for module control
