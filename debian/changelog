@@ -1,3 +1,13 @@
+mc1220-system (1.2.1) stable; urgency=medium
+
+  * fix: remove poweroff.target from platform init
+  * fix: update moxa-module-control.conf
+  * debian: update package dependence
+  * debian: add dependence moxa-atheros-ath10k-driver-amd64
+  * debian: add dependence moxa-connectivity-management
+
+ -- Remus Wu <remusty.wu@moxa.com>  Wed, 24 Jun 2020 20:21:45 +0800
+
 mc1220-system (1.2.0) stable; urgency=medium
 
   * chore: move moxa-config to base-system
