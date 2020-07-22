@@ -1,3 +1,9 @@
+mc1220-system (1.2.2) stable; urgency=medium
+
+  * fix: add 00-globally-managed-devices.conf
+
+ -- Remus Wu <remusty.wu@moxa.com>  Thu, 23 Jul 2020 19:31:40 +0800
+
 mc1220-system (1.2.1) stable; urgency=medium
 
   * fix: remove poweroff.target from platform init
